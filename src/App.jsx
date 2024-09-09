@@ -1,5 +1,7 @@
 import './App.css';
 import { useFetch } from './hooks/useFetch';
+import {ImageGallery} from "./components/imageGallery/imageGallery"
+
 
 function App() {
 const { data } = useFetch (`https://jsonplaceholder.typicode.com/todos/1`)
@@ -12,10 +14,15 @@ const { data } = useFetch (`https://jsonplaceholder.typicode.com/todos/1`)
       <div>
         <p>{data.id}</p>
         <p>{data.title}</p>
+
       </div>
-          
-        
-      )}
+
+         
+
+      
+        )}
+            <ImageGallery />
+       
     </>
   );
 }
